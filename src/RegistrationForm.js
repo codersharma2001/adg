@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './RegistrationForm.css';
 
 const RegistrationForm = () => {
   const [email, setEmail] = useState('');
@@ -9,7 +10,7 @@ const RegistrationForm = () => {
 
   const generateAvalancheAddress = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/generate-avalanche-address', {
+      const response = await axios.post('http://localhost:3001/generate-avalanche-address', {
   email: email,
    });
    if (response.status === 200) {
